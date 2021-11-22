@@ -17,10 +17,12 @@ class ExchangeViewController: UIViewController {
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.tableView.reloadData()
+      tableView.delegate = self
+      tableView.dataSource = self
+
     updateTimestamp()
     setupRefreshControl()
-     self.tableView.reloadData()
+
   }
   
 //MARK: - Refresh Data Methods
@@ -46,6 +48,21 @@ class ExchangeViewController: UIViewController {
 }
 
 //MARK: - Table Methods
+
+extension ExchangeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+      tableView.deselectRow(at: indexPath, animated: true)
+    
+        let vc = storyboard?.instantiateViewController(identifier: "task") as! CurrencyViewController
+        vc.title = "Currency"
+        vc.task1 = rateList[indexPath.row].0 + " - " + rateList[indexPath.row].2
+        vc.task2 = rateList[indexPath.row].3
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+}
+
 extension ExchangeViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return rateList.count
@@ -54,17 +71,15 @@ extension ExchangeViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cellIdentifier = "CurrencyCell"
     
-    var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as UITableViewCell
+    var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+      
     cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: cellIdentifier)
+      
     cell.textLabel?.text = rateList[indexPath.row].0 + " - " + rateList[indexPath.row].2
-    cell.textLabel?.adjustsFontSizeToFitWidth       = true
-    cell.textLabel?.minimumScaleFactor              = 0.6
-    cell.detailTextLabel?.text                      = rateList[indexPath.row].3
-    cell.detailTextLabel?.adjustsFontSizeToFitWidth = true
-    cell.detailTextLabel?.minimumScaleFactor        = 0.6
+
+    cell.detailTextLabel?.text = rateList[indexPath.row].3
+
     return cell
   }
-    
-    
-    
 }
+

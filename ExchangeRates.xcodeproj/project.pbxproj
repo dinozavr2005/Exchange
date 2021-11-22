@@ -15,6 +15,7 @@
 		93C46E4620DB344B00562F9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C46E4520DB344B00562F9F /* Assets.xcassets */; };
 		93C46E5320DB35B700562F9F /* ExchangeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C46E5220DB35B700562F9F /* ExchangeDataModel.swift */; };
 		93E6E19A228A392300B7537C /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6E199228A392300B7537C /* ExchangeViewController.swift */; };
+		E70AFB1E274AC93C006238FD /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AFB1D274AC93C006238FD /* CurrencyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		93C46E4A20DB344B00562F9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C46E5220DB35B700562F9F /* ExchangeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeDataModel.swift; sourceTree = "<group>"; };
 		93E6E199228A392300B7537C /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
+		E70AFB1D274AC93C006238FD /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				937C9C6720E0094100D18C30 /* FirstViewController.swift */,
 				93E6E199228A392300B7537C /* ExchangeViewController.swift */,
+				E70AFB1D274AC93C006238FD /* CurrencyViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				93C46E3F20DB344500562F9F /* AppDelegate.swift in Sources */,
 				93A6F5C622B434C6005BDD67 /* AppID.swift in Sources */,
 				93A6F5C422B42E72005BDD67 /* RateResponse.swift in Sources */,
+				E70AFB1E274AC93C006238FD /* CurrencyViewController.swift in Sources */,
 				937C9C6820E0094100D18C30 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 392M6V3BMG;
 				INFOPLIST_FILE = ExchangeRates/Root/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,7 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 392M6V3BMG;
 				INFOPLIST_FILE = ExchangeRates/Root/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

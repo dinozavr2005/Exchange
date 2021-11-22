@@ -37,7 +37,6 @@ struct ExchangeDataModel {
     let request = URLRequest(url: currencyUrl)
     let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
       if let error = error {
-        //TODO: Add Swift 5 result type to handle errors in asynchronous APIs
         print("ERROR>", error.localizedDescription, "<ERROR")
         return
       }
