@@ -52,11 +52,11 @@
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a8Z-kS-0D1">
                                         <rect key="frame" x="0.0" y="60" width="414" height="748"/>
-                                        <color key="backgroundColor" red="0.168471396" green="0.51802176239999997" blue="0.82454192640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="sectionIndexBackgroundColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="sectionIndexTrackingBackgroundColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="sectionIndexBackgroundColor" systemColor="systemTealColor"/>
+                                        <color key="sectionIndexTrackingBackgroundColor" systemColor="systemTealColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyCell" id="sdm-38-Jmn">
                                                 <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
@@ -76,7 +76,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sHc-m6-Yjn"/>
-                        <color key="backgroundColor" red="0.15294117647058825" green="0.41176470588235292" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="KFY-dF-oXm" secondAttribute="bottom" id="AKq-bv-CP6"/>
                             <constraint firstAttribute="trailing" secondItem="KFY-dF-oXm" secondAttribute="trailing" id="irA-Sk-uUa"/>
@@ -102,15 +102,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-9a-XLe">
-                                <rect key="frame" x="20" y="112" width="374" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-9a-XLe">
+                                <rect key="frame" x="20" y="44" width="374" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="Etg-ky-diO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGx-o0-s21" userLabel="Label2">
-                                <rect key="frame" x="20" y="196" width="374" height="60"/>
+                                <rect key="frame" x="20" y="206" width="374" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -120,6 +122,11 @@
                         <viewLayoutGuide key="safeArea" id="Xy1-7n-Ksj"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IZ2-9a-XLe" firstAttribute="leading" secondItem="Ssl-ux-Xb0" secondAttribute="leadingMargin" id="0Ji-Hq-V3q"/>
+                            <constraint firstItem="IZ2-9a-XLe" firstAttribute="trailing" secondItem="Ssl-ux-Xb0" secondAttribute="trailingMargin" id="LWS-S0-amm"/>
+                            <constraint firstItem="IZ2-9a-XLe" firstAttribute="top" secondItem="Xy1-7n-Ksj" secondAttribute="top" id="PNu-RU-42D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Currency" id="dA8-G4-58n"/>
                     <connections>
@@ -170,7 +177,8 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kJf-xX-EY0"/>
-                        <color key="backgroundColor" red="0.15294117647058825" green="0.41176470588235292" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="s3h-7b-icx" firstAttribute="centerX" secondItem="TmP-tK-5Wx" secondAttribute="centerX" id="4UM-Fg-gCB"/>
                             <constraint firstItem="WdY-9B-icF" firstAttribute="trailing" secondItem="kJf-xX-EY0" secondAttribute="trailing" id="5al-5D-7Rj"/>

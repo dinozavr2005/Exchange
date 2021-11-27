@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		93C46E5320DB35B700562F9F /* ExchangeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C46E5220DB35B700562F9F /* ExchangeDataModel.swift */; };
 		93E6E19A228A392300B7537C /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E6E199228A392300B7537C /* ExchangeViewController.swift */; };
 		E70AFB1E274AC93C006238FD /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AFB1D274AC93C006238FD /* CurrencyViewController.swift */; };
+		E70AFB20274B90E8006238FD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70AFB1F274B90E8006238FD /* Launch Screen.storyboard */; };
+		E7336F8D2752758A00EB4616 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = E7336F8C2752758A00EB4616 /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		93C46E5220DB35B700562F9F /* ExchangeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeDataModel.swift; sourceTree = "<group>"; };
 		93E6E199228A392300B7537C /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		E70AFB1D274AC93C006238FD /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		E70AFB1F274B90E8006238FD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7336F8D2752758A00EB4616 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				93C46E4220DB344500562F9F /* table.storyboard */,
+				E70AFB1F274B90E8006238FD /* Launch Screen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -132,6 +137,9 @@
 			dependencies = (
 			);
 			name = ExchangeRates;
+			packageProductDependencies = (
+				E7336F8C2752758A00EB4616 /* Charts */,
+			);
 			productName = ExchangeRates;
 			productReference = 93C46E3B20DB344500562F9F /* ExchangeRates.app */;
 			productType = "com.apple.product-type.application";
@@ -144,7 +152,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = "Marcy Vernon";
+				ORGANIZATIONNAME = leadgroup;
 				TargetAttributes = {
 					93C46E3A20DB344500562F9F = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -161,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 93C46E3220DB344500562F9F;
+			packageReferences = (
+				E7336F8B2752758900EB4616 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 93C46E3C20DB344500562F9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70AFB20274B90E8006238FD /* Launch Screen.storyboard in Resources */,
 				93C46E4620DB344B00562F9F /* Assets.xcassets in Resources */,
 				93C46E4420DB344500562F9F /* table.storyboard in Resources */,
 			);
@@ -387,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7336F8B2752758900EB4616 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7336F8C2752758A00EB4616 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7336F8B2752758900EB4616 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93C46E3320DB344500562F9F /* Project object */;
 }

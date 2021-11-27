@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Charts
+
 
 class CurrencyViewController: UIViewController {
     
+    lazy var lineChartView: LineChartView = {
+        let chartView = LineChartView()
+        chartView.backgroundColor = .systemRed
+        return chartView
+    }()
     
     @IBOutlet weak var label1: UILabel!
     
@@ -24,6 +31,8 @@ class CurrencyViewController: UIViewController {
         // Do any additional setup after loading the view.
         label1.text = task1
         label2.text = task2
+        
+        view.addSubview(lineChartView)
         
     }
     
