@@ -56,8 +56,9 @@ extension ExchangeViewController: UITableViewDelegate {
     
         let vc = storyboard?.instantiateViewController(identifier: "task") as! CurrencyViewController
         vc.title = "Currency"
-        vc.task1 = rateList[indexPath.row].0 + " - " + rateList[indexPath.row].2
-        vc.task2 = rateList[indexPath.row].3
+        vc.currencyName = rateList[indexPath.row].0 + " - " + rateList[indexPath.row].2
+        vc.currencyValue = rateList[indexPath.row].3
+        vc.currencyCost = rateList[indexPath.row].1
         navigationController?.pushViewController(vc, animated: true)
         
     }

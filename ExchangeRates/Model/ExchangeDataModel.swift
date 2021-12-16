@@ -61,12 +61,14 @@ struct ExchangeDataModel {
       
       for (key, value) in response.rates {
         desc = currencyDescription[key] != nil ? currencyDescription[key]! : ""
-//        reverse = value == 0 ? 0 : Double(1/value).truncate(10)
+
+          
         convert = "1 USD = "
           + String(value)
           + " "
           + key
        rateList.append((currency: key, rate: value, description: desc, convertDesc: convert))
+          
       }
     }
     catch {

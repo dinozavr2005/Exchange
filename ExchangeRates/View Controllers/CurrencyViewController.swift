@@ -17,19 +17,23 @@ class CurrencyViewController: UIViewController {
     
     @IBOutlet weak var label2: UILabel!
     
-    var task1: String?
-    var task2: String?
+    var currencyName: String?
+    var currencyValue: String?
+    var currencyCost: Double?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        label1.text = task1
-        label2.text = task2
+        label1.text = currencyName
+        label2.text = currencyValue
+        
+       
         
         createChart()
         
     }
+    
     private func createChart() {
         //  Create bar chart
         let barChart = BarChartView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width))
@@ -43,7 +47,9 @@ class CurrencyViewController: UIViewController {
         
         // Suply data
         var entries = [BarChartDataEntry]()
-        for x in 0..<10 {
+        entries.append(BarChartDataEntry(x: Double(0),
+                                         y: currencyCost!))
+        for x in 1..<10 {
             entries.append(
                 BarChartDataEntry(
                     x: Double(x),
@@ -59,6 +65,7 @@ class CurrencyViewController: UIViewController {
         
         view.addSubview(barChart)
         barChart.center = view.center
+
     }
 
 
